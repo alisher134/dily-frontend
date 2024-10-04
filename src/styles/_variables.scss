@@ -1,0 +1,23 @@
+$white: #ffffff;
+$primary-color: #00c65e;
+$dark-green: #1e7836;
+$light-green: #ccefdb;
+$bright-orange: #f89358;
+$light-orange: #ffb762;
+$gray-100: #f7f7f7;
+$gray-200: #efefef;
+$gray-300: #dadcdc;
+$gray-700: #363a45;
+
+:export {
+	white: $white;
+	primaryColor: $primary-color;
+	darkGreen: $dark-green;
+	lightGreen: $light-green;
+	brightOrange: $bright-orange;
+	lightOrange: $light-orange;
+	gray-100: $gray-100;
+	gray-200: $gray-200;
+	gray-300: $gray-300;
+	gray-700: $gray-700;
+}
