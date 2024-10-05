@@ -1,0 +1,23 @@
+@import '@/styles/variables';
+
+.cart {
+	.button {
+		cursor: pointer;
+		outline: none;
+		border: none;
+		background: inherit;
+
+		.icon {
+			width: 20px;
+			height: 20px;
+			color: $primary-color;
+			transition: transform 150ms ease-in-out;
+		}
+
+		&:hover {
+			.icon {
+				transform: scale(1.1);
+			}
+		}
+	}
+}

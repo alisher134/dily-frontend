@@ -1,14 +1,30 @@
-import { APP_URL } from '@/shared/constants';
-
 class PublicPages {
-	private root: string;
-
-	constructor() {
-		this.root = APP_URL;
+	HOME(): string {
+		return '/';
 	}
 
-	HOME(): string {
-		return this.root;
+	AUTH(): string {
+		return '/auth';
+	}
+
+	LOGIN(): string {
+		return '/auth?type=login';
+	}
+
+	REGISTER(): string {
+		return '/auth?type=register';
+	}
+
+	CATALOG(): string {
+		return '/catalog';
+	}
+
+	CONTACTS(): string {
+		return '/contacts';
+	}
+
+	DELIVERY(): string {
+		return '/delivery';
 	}
 }
 

@@ -1,0 +1,35 @@
+@import '@/styles/variables';
+
+.user_menu {
+	.link {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+
+		text-decoration: none;
+		color: inherit;
+
+		.icon {
+			width: 20px;
+			height: 20px;
+
+			color: $primary-color;
+			transition: transform 150ms ease-in-out;
+		}
+
+		span {
+			font-weight: 500;
+			transition: color 150ms ease-in-out;
+		}
+
+		&:hover {
+			.icon {
+				transform: scale(1.1);
+			}
+
+			span {
+				color: $primary-color;
+			}
+		}
+	}
+}

@@ -9,6 +9,14 @@ $gray-200: #efefef;
 $gray-300: #dadcdc;
 $gray-700: #363a45;
 
+$desktop: 1440px;
+$iphoneSE: 375px;
+$iphoneXR: 414px;
+$phone-width: 768px;
+$phone-width-850: 850px;
+$tablet-width: 1000px;
+$tablet-width-100: 1100px;
+
 :export {
 	white: $white;
 	primaryColor: $primary-color;
@@ -20,4 +28,19 @@ $gray-700: #363a45;
 	gray-200: $gray-200;
 	gray-300: $gray-300;
 	gray-700: $gray-700;
+
+	desktop: $desktop;
+	iphoneSE: $iphoneSE;
+	iphoneXR: $iphoneXR;
+	phoneWidth: $phone-width;
+	phoneWidth-850: $phone-width-850;
+	tabletWidth: $tablet-width;
+	tabletWidth-100: $tablet-width-100;
+}
+
+@mixin container($max-width: $desktop, $padding: 0) {
+	max-width: $max-width;
+	margin: 0 auto;
+	padding: 0 $padding;
+	width: 100%;
 }

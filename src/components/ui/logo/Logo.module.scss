@@ -1,0 +1,11 @@
+.logo {
+	.icon {
+		transition: transform 150ms ease-in-out;
+	}
+
+	&:hover {
+		.icon {
+			transform: scale(1.1);
+		}
+	}
+}

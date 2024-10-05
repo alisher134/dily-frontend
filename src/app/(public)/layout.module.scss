@@ -1,0 +1,10 @@
+@import '@/styles/variables';
+
+.main {
+	section {
+		@include container();
+
+		padding: 20px 0;
+		min-height: 100vh;
+	}
+}

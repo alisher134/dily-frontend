@@ -1,0 +1,28 @@
+@import '@/styles/variables';
+
+$padding-item: 20px 15px;
+
+.item {
+	list-style: none;
+	display: inline-block;
+
+	padding: $padding-item;
+	transition: color 150ms ease-in-out;
+	position: relative;
+
+	.link {
+		text-decoration: none;
+		color: inherit;
+		padding: $padding-item;
+		transition: color 150ms ease-in-out;
+
+		&:hover {
+			color: $primary-color;
+		}
+	}
+
+	&.active {
+		font-weight: 500;
+		background: rgba($primary-color, 0.3);
+	}
+}
