@@ -1,0 +1,25 @@
+@import '@/styles/variables';
+
+.button {
+	cursor: pointer;
+	outline: none;
+	border: none;
+	background: inherit;
+	background: $primary-color;
+	color: $white;
+	padding: 15px 30px;
+	border-radius: 10px;
+	font-size: 14px;
+	transition: background-color 150ms ease-in-out;
+
+	&:hover {
+		background: darken($primary-color, 10%);
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		background: $gray-300;
+		color: $gray-700;
+		transform: none;
+	}
+}

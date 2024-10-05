@@ -1,5 +1,6 @@
 $white: #ffffff;
 $primary-color: #00c65e;
+$red: #e93e1e;
 $dark-green: #1e7836;
 $light-green: #ccefdb;
 $bright-orange: #f89358;
@@ -20,6 +21,7 @@ $tablet-width-100: 1100px;
 :export {
 	white: $white;
 	primaryColor: $primary-color;
+	red: $red;
 	darkGreen: $dark-green;
 	lightGreen: $light-green;
 	brightOrange: $bright-orange;

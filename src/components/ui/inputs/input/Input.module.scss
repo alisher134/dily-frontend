@@ -1,0 +1,38 @@
+@import '@/styles/variables';
+
+.wrapper {
+	width: 400px;
+
+	.label {
+		font-size: 14px;
+		font-weight: 700;
+	}
+
+	.input {
+		position: relative;
+
+		outline: none;
+		border: none;
+
+		width: 100%;
+		padding: 15px 20px;
+		border: 1px solid $gray-300;
+		border-radius: 10px;
+		transition: color 150ms ease-in-out;
+		margin-top: 7px;
+
+		&:focus {
+			border-color: $primary-color;
+		}
+
+		&::placeholder {
+			color: $gray-300;
+		}
+	}
+
+	.error {
+		position: absolute;
+		color: $red;
+		font-size: 14px;
+	}
+}

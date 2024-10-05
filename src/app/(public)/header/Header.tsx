@@ -1,6 +1,5 @@
 'use client';
 
-import { Logo } from '@/components/ui';
 import cn from 'clsx';
 import { FC, useState } from 'react';
 import { Cart } from './cart/Cart';
@@ -8,6 +7,7 @@ import styles from './Header.module.scss';
 import { Menu } from './menu/Menu';
 import { Search } from './search/Search';
 import { UserMenu } from './user-menu/UserMenu';
+import { Logo } from '@/components/ui';
 
 export const Header: FC = () => {
 	const [active, setActive] = useState(false);

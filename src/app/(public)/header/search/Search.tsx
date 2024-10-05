@@ -1,6 +1,6 @@
 'use client';
 
-import { SearchInput } from '@/components/inputs';
+import { SearchInput } from '@/components/ui/inputs';
 import { FC } from 'react';
 import styles from './Search.module.scss';
 import { useSearch } from './useSearch';
