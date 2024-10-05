@@ -26,6 +26,10 @@ class PublicPages {
 	DELIVERY(): string {
 		return '/delivery';
 	}
+
+	PROFILE(): string {
+		return '/profile';
+	}
 }
 
 export const PUBLIC_PAGES = new PublicPages();

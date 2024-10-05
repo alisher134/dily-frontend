@@ -11,6 +11,7 @@ import {
 import type { Metadata } from 'next';
 import { Fira_Mono } from 'next/font/google';
 import './globals.scss';
+import Providers from './Providers';
 
 const font = Fira_Mono({
 	subsets: ['latin', 'cyrillic'],
@@ -80,7 +81,9 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang='ru' className={font.className}>
-			<body>{children}</body>
+			<body>
+				<Providers>{children}</Providers>
+			</body>
 		</html>
 	);
 }

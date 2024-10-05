@@ -9,7 +9,6 @@ import styles from './MenuItem.module.scss';
 
 export const MenuItem: FC<{ item: IMenuItem }> = ({ item }) => {
 	const pathname = usePathname();
-	console.log(pathname, item.link);
 
 	return (
 		<li
