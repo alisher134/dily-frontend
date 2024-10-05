@@ -9,7 +9,8 @@ import styles from './Auth.module.scss';
 import { useAuth } from './useAuth';
 
 export const Auth: FC = () => {
-	const { registerInput, handleSubmit, errors, onSubmit, type } = useAuth();
+	const { registerInput, handleSubmit, errors, onSubmit, type, setType } =
+		useAuth();
 
 	return (
 		<div className={styles.auth}>
@@ -63,7 +64,7 @@ export const Auth: FC = () => {
 					className={styles.input}
 				/>
 
-				<AuthButtons type={type} />
+				<AuthButtons type={type} setType={setType} />
 			</form>
 		</div>
 	);

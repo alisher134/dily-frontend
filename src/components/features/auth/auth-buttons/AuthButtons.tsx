@@ -5,9 +5,10 @@ import styles from './AuthButtons.module.scss';
 
 interface AuthButtonsProps {
 	type: string;
+	setType: (value: string) => void;
 }
 
-export const AuthButtons: FC<AuthButtonsProps> = ({ type }) => {
+export const AuthButtons: FC<AuthButtonsProps> = ({ type, setType }) => {
 	return (
 		<div className={styles.buttons}>
 			<Button type='submit' className={styles.button}>
@@ -17,12 +18,16 @@ export const AuthButtons: FC<AuthButtonsProps> = ({ type }) => {
 			{type === EnumAuthType.LOGIN ? (
 				<p className={styles.toggle}>
 					Нет аккаунта?
-					<button type='button'>Регистрация</button>
+					<button type='button' onClick={() => setType(EnumAuthType.REGISTER)}>
+						Регистрация
+					</button>
 				</p>
 			) : (
 				<p className={styles.toggle}>
 					Уже есть аккаунт?
-					<button type='button'>Войти</button>
+					<button type='button' onClick={() => setType(EnumAuthType.LOGIN)}>
+						Войти
+					</button>
 				</p>
 			)}
 		</div>
