@@ -10,6 +10,7 @@
 	padding-left: 15px;
 
 	width: 300px;
+	transition: border 150ms ease-in-out;
 
 	.input {
 		width: 100%;
@@ -35,6 +36,15 @@
 
 		&:hover {
 			opacity: 90%;
+		}
+	}
+
+	&:focus-within {
+		border-color: $gray-700;
+
+		.button {
+			color: $white;
+			background: $gray-700;
 		}
 	}
 }
