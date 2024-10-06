@@ -1,0 +1,78 @@
+@import '@/styles/variables';
+
+.user_popup {
+	position: relative;
+
+	.button {
+		cursor: pointer;
+		background: inherit;
+		border: none;
+		outline: none;
+
+		.icon {
+			width: 20px;
+			height: 20px;
+			color: $primary-color;
+		}
+
+		&:hover {
+			.icon {
+				transform: scale(1.1);
+			}
+		}
+	}
+
+	.popup {
+		width: 200px;
+		position: absolute;
+		top: calc(100% + 35px);
+		right: 0;
+
+		border-radius: 5px;
+		box-shadow: 3px 4px 12px rgba(54, 58, 69, 0.26);
+		padding: 15px 20px;
+		background-color: $white;
+
+		.arrow {
+			position: absolute;
+			top: -8px;
+			right: 20px;
+			width: 0;
+			height: 0;
+			border-left: 8px solid transparent;
+			border-right: 8px solid transparent;
+			border-bottom: 8px solid #ffffff;
+		}
+
+		.item {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			font-size: 16px;
+			text-decoration: none;
+			color: inherit;
+			transition: color 150ms ease-in-out;
+
+			> svg {
+				width: 20px;
+				height: 20px;
+				color: $primary-color;
+			}
+
+			&:hover {
+				color: $primary-color;
+			}
+
+			&:not(:first-child) {
+				margin-top: 10px;
+			}
+		}
+
+		.button {
+			cursor: pointer;
+			border: none;
+			outline: none;
+			background: inherit;
+		}
+	}
+}

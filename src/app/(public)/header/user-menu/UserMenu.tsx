@@ -6,19 +6,17 @@ import { Loader, User2 } from 'lucide-react';
 import Link from 'next/link';
 import { FC } from 'react';
 import styles from './UserMenu.module.scss';
+import { UserPopup } from './user-popup/UserPopup';
 
 export const UserMenu: FC = () => {
 	const { user, isLoading } = useProfile();
 
+	if (isLoading) return <Loader />;
+
 	return (
 		<div className={styles.user_menu}>
-			{isLoading ? (
-				<Loader />
-			) : user ? (
-				<Link href={PUBLIC_PAGES.PROFILE()} className={styles.link}>
-					<User2 className={styles.icon} />
-					<span>Профиль</span>
-				</Link>
+			{user.isLoggedIn ? (
+				<UserPopup />
 			) : (
 				<Link href={PUBLIC_PAGES.LOGIN()} className={styles.link}>
 					<User2 className={styles.icon} />

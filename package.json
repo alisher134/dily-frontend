@@ -19,7 +19,9 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",
-    "react-hot-toast": "^2.4.1"
+    "react-hot-toast": "^2.4.1",
+    "sass": "^1.79.4",
+    "sass-embedded": "^1.79.4"
   },
   "devDependencies": {
     "@tanstack/react-query-devtools": "^5.59.0",
@@ -27,9 +29,9 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "css-loader": "^7.1.2",
     "globals": "^15.10.0",
     "prettier": "^3.3.3",
-    "sass": "^1.79.4",
     "typescript": "^5"
   }
 }

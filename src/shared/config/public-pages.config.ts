@@ -27,8 +27,8 @@ class PublicPages {
 		return '/delivery';
 	}
 
-	PROFILE(): string {
-		return '/profile';
+	PROFILE(url: string = ''): string {
+		return `/profile${url ? '/' + url : ''}`;
 	}
 }
 

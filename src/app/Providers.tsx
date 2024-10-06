@@ -18,7 +18,7 @@ export default function Providers({ children }: PropsWithChildren<unknown>) {
 
 	return (
 		<QueryClientProvider client={client}>
-			<Toaster position='top-right' />
+			<Toaster position='bottom-left' />
 			{children}
 			<ReactQueryDevtools />
 		</QueryClientProvider>

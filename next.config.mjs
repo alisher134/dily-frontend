@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	sassOptions: {
-		implementation: 'sass-embedded'
+		implementation: 'sass'
 	},
 	env: {
 		APP_URL: process.env.APP_URL,

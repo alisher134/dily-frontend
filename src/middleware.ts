@@ -10,7 +10,6 @@ export async function middleware(request: NextRequest) {
 	const refreshToken = request.cookies.get(EnumTokens.REFRESH_TOKEN)?.value;
 
 	const isAdminPage = request.url.includes(ADMIN_PAGES.HOME());
-
 	if (!refreshToken) {
 		request.cookies.delete(EnumTokens.ACCESS_TOKEN);
 		return redirectToLogin(isAdminPage, request);
@@ -54,7 +53,7 @@ export const config = {
 };
 
 const redirectToLogin = (isAdminPage: boolean, request: NextRequest) => {
-	return NextResponse.redirect(
-		new URL(isAdminPage ? '/404' : PUBLIC_PAGES.LOGIN(), request.url)
-	);
+	return isAdminPage
+		? NextResponse.rewrite(new URL('/404', request.url))
+		: NextResponse.redirect(new URL(PUBLIC_PAGES.LOGIN(), request.url));
 };
